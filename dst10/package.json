@@ -1,0 +1,18 @@
+{
+  "name": "dst10",
+  "version": "1.0.0",
+  "description": "Matrix exercise",
+  "main": "dst10.js",
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Sara Ainali",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0"
+  },
+  "dependencies": {
+    "heap-js": "^2.2.0"
+  }
+}

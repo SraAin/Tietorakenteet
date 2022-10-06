@@ -1,0 +1,73 @@
+Node {
+  compare: [Function: defaultComparator],
+  right: Node {
+    compare: [Function: defaultComparator],
+    right: null,
+    left: Node {
+      compare: [Function: defaultComparator],
+      right: [Node],
+      left: null,
+      value: 12
+    },
+    value: 23
+  },
+  left: Node {
+    compare: [Function: defaultComparator],
+    right: Node {
+      compare: [Function: defaultComparator],
+      right: null,
+      left: [Node],
+      value: 6
+    },
+    left: Node {
+      compare: [Function: defaultComparator],
+      right: null,
+      left: null,
+      value: 1
+    },
+    value: 2
+  },
+  value: 10
+}
+
+BINÄÄRIHAKUPUU
+
+             10
+           /    \
+          2     23
+         / \    /  
+        1   6  12   
+           /    \
+          5     21
+
+Millainen puun rakenne on?
+- Puun juuri on luku 10. Juurella on kaksi lasta luvut 2 ja 23. Luvulla 2 on kaksi lasta 1 ja 6.
+  Luvulla 6 on yksi lapsi 5. Luvulla 23 on myös yksi lapsi 12 ja 12 on yksi lapsi 21. 
+  Luvut 1, 5 ja 21 ovat puunlehtiä, koska niillä ei ole lapsia.  
+
+Mihin periaatteisiin depthFirst ja breadthFirst funktioiden haut perustuvat?
+- deapthFirst-funktion haku perustuu pystysuoraan hakemiseen. breadthFirst-funktion haku
+  perustuu vaakasuoraan hakemiseen. Molemmissa funktiossa lähdetään liikkeelle puun juuresta. 
+  breadthFirst lukee vasemman puoleisen lapsen solmuja niin kauan, että saavutetaan puun lehti. 
+  Tämän jälkeen siirrytään yksi solmu oikealle ja toistetaan haku prosessi. breadthFirst lukee 
+  puun vasemmalta oikealle välittämättä solmujen suorasta yhteydestä.     
+
+Depth-first:
+10
+2
+1
+6
+5
+23
+12
+21
+
+Breadth-first:
+10
+2
+23
+1
+6
+12
+5
+21
